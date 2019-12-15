@@ -1,4 +1,9 @@
 const delay = 100
+
+const w : number = window.innerWidth
+const h : number = window.innerHeight
+const fontSizeFactor : number = 12
+
 class Animator {
 
     animated : boolean
@@ -46,6 +51,9 @@ class TextAnimator {
 
     initBlock() {
         document.body.appendChild(this.block)
+        this.block.style.fontSize = `${Math.min(w, h) / fontSizeFactor}px`
+        this.block.style.fontFamily = `"Comic Sans MS", cursive, sans-serif`
+        this.block.style.color = '#1976D2'
     }
 
     start(text) {
