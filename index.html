@@ -1,9 +1,13 @@
 <body>
     <script src = "index.js">
     </script>
+    <script src = "TextContainer.ts">
+    </script>
     <script>
-        const textAnimator = new TextAnimator()
-        textAnimator.initBlock()
-        textAnimator.start("hello world I am fine. What about you?")
+        const textContainer = TextContainer.init()
+        const textAnimator = TextAnimator.init()
+        textContainer.handleClick((text) => {
+            textAnimator.start(text)
+        })
     </script>
 </body>
