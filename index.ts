@@ -55,6 +55,7 @@ class TextAnimator {
         this.block.style.fontFamily = `"Comic Sans MS", cursive, sans-serif`
         this.block.style.color = '#1976D2'
         this.block.style.display = "block"
+        this.block.style.marginTop = "5px"
     }
 
     start(text) {
@@ -71,6 +72,6 @@ class TextAnimator {
     static init() : TextAnimator {
         const ta : TextAnimator = new TextAnimator()
         ta.initBlock()
-        return ta 
+        return ta
     }
 }

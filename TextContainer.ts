@@ -6,12 +6,13 @@ class TextContainer {
     initTextStyle() {
         this.text.style.display = "block"
         this.text.rows = 5
-        this.text.cols = 30
+        this.text.cols = 80
     }
 
     initButtonStyle() {
         this.button.innerHTML = "submit"
         this.button.style.display = "block"
+        this.button.style.marginTop = "5px"
     }
 
     initContainer() {
