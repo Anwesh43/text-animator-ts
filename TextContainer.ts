@@ -24,6 +24,7 @@ class TextContainer {
     handleClick(cb : Function) {
         this.button.onclick = () => {
             cb(this.text.value)
+            this.text.value = ""
         }
     }
 
