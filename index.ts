@@ -37,3 +37,25 @@ class TextState {
         cb(this.text.substring(0, this.l))
     }
 }
+
+class TextAnimator {
+
+    block : HTMLDivElement = document.createElement('div')
+    animator : Animator = new Animator()
+    state : TextState
+
+    initBlock() {
+        document.body.appendChild(this.block)
+    }
+
+    start(text) {
+        this.state = new TextState(text)
+        this.animator.start(() => {
+            this.state.update((text) => {
+                this.block.innerHTML = text
+            }, () => {
+                this.animator.stop()
+            })
+        })
+    }
+}
